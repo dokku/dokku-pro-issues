@@ -1,0 +1,44 @@
+---
+name: Bug Report
+description: File a bug report
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of problem
+      description: What happened? What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What are the steps that we need to follow to reproduce this issue?
+    validations:
+      required: true
+  - type: dropdown
+    id: pro-version
+    attributes:
+      label: dokku-pro version
+      description: Please select your dokku-pro version
+    multiple: false
+    options:
+      - label: 1.2.0
+      - label: 1.1.2
+      - label: 1.1.1
+      - label: 1.1.0
+      - label: 1.0.0
+  - type: textarea
+    id: report-output
+    attributes:
+      label: dokku report
+      description: Please paste the output of the command `dokku report`
+    validations:
+      required: true
+  - type: textarea
+    id: additional-output
+    attributes:
+      label: Additional information
+    validations:
+      required: false
